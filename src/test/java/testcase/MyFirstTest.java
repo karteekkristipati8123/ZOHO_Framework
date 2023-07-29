@@ -19,5 +19,7 @@ public class MyFirstTest extends BaseTest {
 	Thread.sleep(2000);
 	driver.findElement(By.xpath(loc.getProperty("login_button"))).click();
 	Thread.sleep(5000);
+	String title=driver.getTitle();
+	System.out.println(title);
 	}
 }
