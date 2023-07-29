@@ -24,15 +24,16 @@ public class BaseTest {
 		prop.load(fr);
 		loc.load(fr1);
 		ChromeOptions op = new ChromeOptions();
+		op.setHeadless(true);
 		op.addArguments("--remote-allow-origins=*");
 		driver = new ChromeDriver(op);
 		driver.manage().window().maximize();
 		driver.get(prop.getProperty("testurl"));
 	}
-	@AfterTest
-	public void teardown()
-	{
-		driver.close();
-		driver.quit();
-	}
+//	@AfterTest
+//	public void teardown()
+//	{
+//		driver.close();
+//		driver.quit();
+//	}
 }
